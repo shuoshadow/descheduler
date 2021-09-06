@@ -69,6 +69,7 @@ type Namespaces struct {
 // Besides Namespaces ThresholdPriority and ThresholdPriorityClassName only one of its members may be specified
 type StrategyParameters struct {
 	NodeResourceUtilizationThresholds *NodeResourceUtilizationThresholds `json:"nodeResourceUtilizationThresholds,omitempty"`
+	NodeRealUtilizationThresholds     *NodeRealUtilizationThresholds     `json:"nodeRealUtilizationThresholds,omitempty"`
 	NodeAffinityType                  []string                           `json:"nodeAffinityType,omitempty"`
 	PodsHavingTooManyRestarts         *PodsHavingTooManyRestarts         `json:"podsHavingTooManyRestarts,omitempty"`
 	PodLifeTime                       *PodLifeTime                       `json:"podLifeTime,omitempty"`
@@ -102,4 +103,12 @@ type RemoveDuplicates struct {
 type PodLifeTime struct {
 	MaxPodLifeTimeSeconds *uint    `json:"maxPodLifeTimeSeconds,omitempty"`
 	PodStatusPhases       []string `json:"podStatusPhases,omitempty"`
+}
+
+type NodeRealUtilizationThresholds struct {
+	WatcherAddress string `json:"watcherAddress"`
+	// real cpu rate
+	TargetCpuRate float64 `json:"targetCpuRate,omitempty"`
+	// real memory rate
+	TargetMemoryRate float64 `json:"targetMemoryRate,omitempty"`
 }

@@ -47,6 +47,9 @@ github.com/evanphx/json-patch
 github.com/felixge/httpsnoop
 # github.com/form3tech-oss/jwt-go v3.2.3+incompatible
 github.com/form3tech-oss/jwt-go
+# github.com/francoispqt/gojay v1.2.13
+## explicit
+github.com/francoispqt/gojay
 # github.com/go-logr/logr v0.4.0
 github.com/go-logr/logr
 # github.com/go-openapi/jsonpointer v0.19.5

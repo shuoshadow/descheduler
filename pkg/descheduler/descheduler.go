@@ -77,6 +77,7 @@ func RunDeschedulerStrategies(ctx context.Context, rs *options.DeschedulerServer
 		"RemoveDuplicates":                            strategies.RemoveDuplicatePods,
 		"LowNodeUtilization":                          nodeutilization.LowNodeUtilization,
 		"HighNodeUtilization":                         nodeutilization.HighNodeUtilization,
+		"RealNodeUtilization":                         nodeutilization.RealNodeUtilization,
 		"RemovePodsViolatingInterPodAntiAffinity":     strategies.RemovePodsViolatingInterPodAntiAffinity,
 		"RemovePodsViolatingNodeAffinity":             strategies.RemovePodsViolatingNodeAffinity,
 		"RemovePodsViolatingNodeTaints":               strategies.RemovePodsViolatingNodeTaints,

@@ -71,6 +71,7 @@ type Namespaces struct {
 //  once the policy version is bumped to v1alpha2
 type StrategyParameters struct {
 	NodeResourceUtilizationThresholds *NodeResourceUtilizationThresholds
+	NodeRealUtilizationThresholds     *NodeRealUtilizationThresholds
 	NodeAffinityType                  []string
 	PodsHavingTooManyRestarts         *PodsHavingTooManyRestarts
 	PodLifeTime                       *PodLifeTime
@@ -104,4 +105,12 @@ type RemoveDuplicates struct {
 type PodLifeTime struct {
 	MaxPodLifeTimeSeconds *uint
 	PodStatusPhases       []string
+}
+
+type NodeRealUtilizationThresholds struct {
+	WatcherAddress string
+	// real cpu rate
+	TargetCpuRate float64
+	// real memory rate
+	TargetMemoryRate float64
 }
